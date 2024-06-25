@@ -1,6 +1,6 @@
 
 const PIPE_SPEED = 0.2;
-const PIPE_DURATION = 1500
+const PIPE_DURATION = 3000
 const HOLE_HEIGHT = 120;
 const PIPE_WIDTH = 80;
 
