@@ -1,0 +1,65 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+.heading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    inset: 0;
+    font-size: 1.8rem;
+}
+.title{
+    font-size: 1em;
+}
+.sub-title{
+    font-size: 1em;
+    z-index: 10;
+}
+.hide{
+    display: none;
+}
+.bird{
+    --bird-size:40;
+    --top:-1000;
+    
+    width: calc(var(--bird-size) * 1px);
+    height: calc(var(--bird-size) * 1px);
+    position: absolute;
+    left: 10px;
+    top:calc(var(--top) * 1px);
+    transform: translateY(-50%);
+    background-color: hsl(200, 75%, 70%);
+    border-radius: 50%;
+}
+.pipe{
+    --pipe-left: 80;
+    --top-pipe-hole: 300;
+    --gap-bw-pipe:120;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: calc(var(--pipe-left) * 1px);
+    width: 80px;
+}
+.segment{
+    width: 100%;
+    position: absolute;
+    background-color: hsl(100, 50%, 30%);
+}
+.top{ 
+    top:0;
+    bottom: calc(var(--top-pipe-hole) * 1px);
+}
+.bottom{
+    bottom:0;
+    top:calc(100vh - (var(--top-pipe-hole) * 1px) + (var(--gap-bw-pipe) * 1px));
+}
